@@ -58,3 +58,7 @@ combined <- reshape2::dcast(data = combined, SubjectNum + Activity ~ variable, f
 
 # create final tidy_data in csv file.
 data.table::fwrite(x = combined, file = "tidy_data.csv", quote = FALSE)
+
+# last step required when submitting project asks to run code below and create 
+# a txt file and upload it via Coursera. 
+write.table(x = combined, file = "tidy_data.txt", row.names = FALSE)
